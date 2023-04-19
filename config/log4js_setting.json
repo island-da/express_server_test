@@ -1,0 +1,29 @@
+{
+    "appenders": {
+        "system": {
+            "type": "file",
+            "filename": "./log/system.log"
+        },
+        "debug": {
+            "type": "file",
+            "filename": "./log/debug.log"
+        },
+        "console": {
+            "type": "stdout",
+            "layout": {
+                "type": "pattern",
+                "pattern": "%d %p %m"
+            }
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": ["system"],
+            "level": "error"
+        },
+        "debug": {
+            "appenders": ["console", "debug"],
+            "level": "debug"
+        }
+    }
+}
